@@ -1,0 +1,219 @@
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+// Create class student. protected data members (alia)
+class student
+{
+	protected:
+		string name, fac;
+		int id;
+		
+	public: 
+		void setdata()
+		{
+			fflush(stdin);
+			cout<<"Enter name : ";
+			getline(cin,name);
+			fflush(stdin);
+			cout<<"Enter Student ID : ";
+			cin>>id;
+			cout<<"Enter Faculty : ";
+			cin>>fac;	
+		}
+		
+		void display()
+		{
+			cout<<"\nName"<<name;
+			cout<<"\nStudent ID"<<id;
+			cout<<"\nFaculty"<<fac;
+		}
+		
+//TO MAKE A FILE OF RECORDED PROFILE	(ASWAD)
+		void write()
+		{
+//			students stu;
+//		    ofstream o_File;
+//		    o_File.open("students.dat",ios::binary|ios::app);
+//		    stu.enterdata();
+//		    o_File.write(reinterpret_cast<char *> (&stu), sizeof(students));
+//		    o_File.close();
+//		        cout<<"\n\nStudent record is Created ";
+//		    cin.ignore();
+//		    cin.get();
+		}
+		
+//TO OPEN A FILE OF RECORDED PROFILE (ASWAD)		
+		void display_student()
+		{
+		//CREATE FUNCTION TO CALL STUDENT'S RECORDED FILE. PLEASE MAKE SURE YOU CAN OPEN FILE THAT HAVE
+		//RECORDED PROFILE. YOU CAN CHANGE THE CODE IN OTHER FUNCTION IF IT'S NOT FOLLOWING YOUR STANDARD.	
+
+//		  students stu;
+//	    ifstream in_File;
+//	    in_File.open("students.dat",ios::binary);
+//	    if(!in_File)
+//	    {
+//	        cout<<" Not able to open file !";
+//	        cin.ignore();
+//	        cin.get();
+//	        return;
+//	    }
+//	    cout<<"\n\t\tDISPLAY ALL THE RECORD PRESENT !\n\n";
+//	    while(in_File.read(reinterpret_cast<char *> (&stu), sizeof(students)))
+//	    {
+//	        stu.display();
+//	    }
+//	    in_File.close();
+//	    cin.ignore();
+//	    cin.get();
+//		}
+};
+
+
+//CREATE CLUB NAME LIST AND MAKE SURE THE USER CAN CHOOSE TO VIEW EITHER NON-SPORT OR SPORT
+//(NISHA LUANNE)
+class club
+{
+	public:
+		//char choice;
+		
+		void club_setdata()
+		{
+		//	cout<<"Choose [1]to view NON-SPORT clubs OR [2] to view sport clubs : ";
+		//	cin>>choice;
+		}
+		void nonsport()
+		{
+	//		cout<<"You choose to view non-sport clubs in MMU.";
+	//		cout<<"\n a.E-sport club";
+	//		cout<<"\n b.Media and entertainment club";
+	//		cout<<"\n c.Robotic club";
+	//		cout<<"\n d.Choir club";
+	//		cout<<"\n e.Art and theatre club";
+	//		cout<<"\n f.Music club";
+	//ADD "This club is available in both campus. "
+		}
+		void sport()
+		{		
+	//		cout<<"You choose to view sport clubs in MMU.";
+	//		cout<<"\n a.Basketball club";
+	//		cout<<"\n b.Netball club";
+	//		cout<<"\n c.Baseball club";
+	//		cout<<"\n d.Fencing club";
+	//		cout<<"\n e.Squash club";
+	//		cout<<"\n f.Squash club";
+	//ADD "This club is available in both campus. "
+		}	
+
+};
+
+//CREATE CLASS FOR CLUB'S REGISTRATION (WAI SOONG)
+class club_reg
+{
+	protected:
+		//string name,email;
+		//int id,num;
+		//char campus,club;
+	public:
+		void setdata_reg()
+		{
+		//====CLUB REGISTRATION====
+		//	Enter full name : 
+		//cin>>name;
+		//	Enter student ID : 
+		//cin>>id;
+		//	Enter phone number : 
+		//cin>>num;
+		//	Enter campus (Melaka | Cyberjaya ) : 
+		//cin>>campus;
+		//	Enter your email address :
+		//cin>>email; 
+		//	Enter your club choice’s(club's name) :
+		//cin>>club; 
+		}
+		
+		void display_reg()
+		{//DISPLAY NAME,ID,PHONE NUMBER, EMAIL, CAMPUS AND CLUB CHOICES
+			
+		}
+};
+
+int main()
+{
+	int choice;
+	
+//MAIN MENU//
+	cout<<"\tHELLO! WELCOME TO MMU ";
+	cout<<"\n-------------------------------";
+	cout<<"\nWelcome to the MMU club management system. ";
+	cout<<"\n\nDear student, what do you want to do? ";
+	cout<<"\n1.Add New profile ";
+	cout<<"\n2.Student Login ";
+	cout<<"\n3.Club list ";
+	cout<<"\n4.Club Registration ";
+	cout<<"\n5.Exit ";
+	cout<<"\n\nPlease enter your choice (1-5) : ";
+	cin>>choice;
+
+//YOU CAN DO EITHER IF-ELSE OR SWITCH FUNCTION, TO CALL CLASS FUNCTION.
+//BAWAH NI CONTOH
+//(IVAN LOW)	
+	if(choice == 1)
+	{//calls function student
+		student S;
+		S.setdata();
+		S.setdata();
+		S.write();
+	}
+	else if(choice == 2)
+	{//calls function student login
+		
+	}
+	else if(choice == 3)
+	{//calls function club list
+		
+	}
+	else if(choice == 4)
+	{//calls function club registration form
+		
+	}
+	else (choice == 5)	
+	{//exit program
+		
+	}
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+	
+	/////CONTOH///IGNORE///
+//	if(choice == 1)
+//	{//calls function of executive
+//		Executive E;
+//		E.setdata();
+//		E.setExecutive();
+//		E.cal_salary_exec();
+//		E.display();
+//	}
+//	else if(choice == 2)
+//	{//calls function of salesperson
+//		Salesperson S;
+//		S.setdata();
+//		S.setSalesperson();
+//		S.cal_salary_sales();
+//		S.display();
+//	}
+//	else
+//	{
+//		cout<<"invalid choice "<<endl;
+//	}
